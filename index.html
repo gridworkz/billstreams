@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>BillStreams - Easy Cloud Biling</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ======== CSS here ======== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- ======== preloader start ======== -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- ======== header start ======== -->
+    <header class="header">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/img/logo/logo.png" alt="Logo" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#why">Why BillStreams</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#why">&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#why"><strong>Login &#10132;</strong></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+    </header>
+    <!-- ======== header end ======== -->
+
+    <!-- ======== hero-section start ======== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="wow fadeInUp" data-wow-delay=".4s">
+                Cloud Billing for the New Era of Products and Services 
+              </h1>
+              <p class="wow fadeInUp" data-wow-delay=".6s">
+                For usage-based, subscription-based, and everything in between. With our API, make your billing fit your pricing and business workflows, not the reverse.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="main-btn border-btn btn-hover wow fadeInUp"
+                data-wow-delay=".6s"
+                >Start For Free</a
+              >
+              <a href="#features" class="scroll-bottom">
+                <i class="lni lni-arrow-down"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+              <img src="assets/img/hero/hero-img.png" alt="" />
+                <!-- Hero tab pane -->              
+                <div class="container" style="margin-left: 45px; margin-top: -550px; width: 726px; background-color: white; position: absolute;">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="pill" href="#usage">Usage Monitoring</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="pill" href="#plan">Plan Configuration</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="pill" href="#invoice">Automatic Invoicing</a>
+                    </li>
+                  </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane container active" id="usage"><span style="margin-top: 25px; font-size: 18px;"><strong>Monitor usage with real-time events</strong><br /><br />BillStreams ingests all events coming from your back-end system and converts them into billable metrics that track your customers’ consumption.
+                    <br /><br /><code><pre style="background-color: black; color: white; border-radius: 10px;">
+  
+  1 // Ingest metered events to aggregate billing usage
+  2 BILLSTREAMS_URL="https://api.billstreams.com"
+  3 API_KEY="__YOUR_API_KEY__"
+  4
+  5 curl --location --request POST "$BILLSTREAMS_URL/api/v1/events" /
+  6 --header "Authorization: Bearer $API_KEY" /
+  7 --header 'Content-Type: application/json' /
+  8 --data-raw '{ 
+  9	"event": {
+  10		"transaction_id": "1234_5678_9012_3456",
+  11		"customer_id": "0987_6543_3210_0987",
+  12		"code": "api_calls",
+  13		"timestamp": 1653481578,
+  14		"properties": { 
+  15			"nb_api_calls": 12
+  16		}
+  17	}
+  18 }'
+                    </pre></code></span></div>
+                  <div class="tab-pane container fade" id="plan"><span style="margin-top: 25px; font-size: 18px;"><strong>Add usage-based charges to your plans</strong><br /><br />Our flexible pricing models allow you to create hybrid pricing plans that may include a subscription and multiple consumption-based charges.
+                    <br /><br /><code><pre style="background-color: black; color: white; border-radius: 10px;">
+  
+  1 // Charge those billing events inside plans, with flexibility!
+  2 BILLSTREAMS_URL="https://api.getlago.com"
+  3 API_KEY="__YOUR_API_KEY__"
+  4
+  5 curl --location --request POST "$BILLSTREAMS_URL/api/v1/subscriptions" /
+  6 --header "Authorization: Bearer $API_KEY" /
+  7 --header 'Content-Type: application/json' /
+  8 --data-raw '{ 
+  9	"subscription": {
+  10		"customer_id": "0987_6543_3210_0987",
+  11		"plan_code": "premium"
+  12	}
+  13 }'
+                    </pre></code></span></div>
+                  <div class="tab-pane container fade" id="invoice"><span style="margin-top: 25px; font-size: 18px;"><strong>Issue auto-generated invoices</strong><br /><br />Depending on the configuration of your plans, BillStreams automatically calculates how much you are owed and generates an invoice for each customer.
+                    <br /><br /><code><pre style="background-color: black; color: white; border-radius: 10px;">
+
+  1 // BillStreams automatically aggregates charges into invoices
+  2 "fees": [
+  3    {
+  4      "item": {
+  5	 "type": "subscription",
+  6	 "code": "premium",
+  7	 "name": "Premium"
+  8    },
+  9      "amount_cents": 1000,
+  10     "amount_currency": "USD",
+  11     "vat_amount_cents": 200,
+  12     "units": "1"
+  13   },
+  14     "item": {
+  15	 "type": "charge",
+  16	 "code": "api_calls",
+  17	 "name": "API Calls"
+  18     },
+  19     "amount_cents": 100,
+  20     "amount_currency": "USD",
+  21     "units": "12901"
+  22   }]
+                    </pre></code></span></div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== hero-section end ======== -->
+
+    <!-- ======== feature-section start ======== -->
+    <section id="features" class="feature-section pt-120">
+      <div class="container"><br />
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-target-revenue"></i>
+              </div>
+              <div class="content">
+                <h3>Cost</h3>
+                <p>
+                  Our free-tier version is free forever. We will not take a percentage of your revenue. More information <a href="#">here</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-layout"></i>
+              </div>
+              <div class="content">
+                <h3>Composability</h3>
+                <p>
+                  Use our infrastructure, or fork it to fit your specific pricing model without pleading for a product update.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-money-protection"></i>
+              </div>
+              <div class="content">
+                <h3>Privacy</h3>
+                <p>
+                  Your customer and financial data never has to leave your infrastructure. Stay in total control on-site.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== feature-section end ======== -->
+
+    <!-- ======== about-section start ======== -->
+    <section id="about" class="about-section pt-150">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-img">
+              <img src="assets/img/about/about-1.png" alt="" class="w-100" />
+              <img
+                src="assets/img/about/about-left-shape.svg"
+                alt=""
+                class="shape shape-1"
+              />
+              <img
+                src="assets/img/about/left-dots.svg"
+                alt=""
+                class="shape shape-2"
+              />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-content">
+              <div class="section-title mb-30">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Bill Your Customers Seamlessly and Effortlessly
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Create marketing campaigns with coupons that customers can redeem to get a discount on their next invoice. 
+                  Use add-ons to charge for additional services and products, such as implementation support and optional features.
+                  Monitor consumption in real time throughout the billing cycle and help customers understand how they are charged.
+                  Define tax rates at company level or customer level to ensure compliance with local legislation.
+                </p>
+              </div>
+              <a
+                href="javascript:void(0)"
+                class="main-btn btn-hover border-btn wow fadeInUp"
+                data-wow-delay=".6s"
+                >Discover More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== about-section end ======== -->
+
+    <!-- ======== about2-section start ======== -->
+    <section id="about" class="about-section pt-150">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-content">
+              <div class="section-title mb-30">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Easy to Use and Engineer Friendly
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Billng is an engineerng challenge. Its scope involves numerous teams: sales, finance, marketing, customer success. 
+                  But the root cause of a billing system’s performance will always revolve around how engineers implement and maintain it.
+                  We want to make this process as easy as possible.
+                </p>
+              </div>
+              <ul>
+                <li>Clear API Reference</li>
+                <li>Define Webhooks</li>
+                <li>Integration Testing</li>
+              </ul>
+              <a
+                href="javascript:void(0)"
+                class="main-btn btn-hover border-btn wow fadeInUp"
+                data-wow-delay=".6s"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 order-first order-lg-last">
+            <div class="about-img-2">
+              <img src="assets/img/about/about-2.png" alt="" class="w-100" />
+              <img
+                src="assets/img/about/about-right-shape.svg"
+                alt=""
+                class="shape shape-1"
+              />
+              <img
+                src="assets/img/about/right-dots.svg"
+                alt=""
+                class="shape shape-2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== about2-section end ======== -->
+
+    <!-- ======== feature-section start ======== -->
+    <section id="why" class="feature-extended-section pt-100">
+      <div class="feature-extended-wrapper">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xxl-5 col-xl-6 col-lg-8 col-md-9">
+              <div class="section-title text-center mb-60">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Why Choose BillStreams
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  A great alternative to proprietary closed billing systems. Stay in complete control of your financial data.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-github"></i>
+                </div>
+                <div class="content">
+                  <h3>Open Source</h3>
+                  <p>
+                    Our goal is to provide a fair pricing model. No more
+                    taking a percentage of your earned revenue
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-apartment"></i>
+                </div>
+                <div class="content">
+                  <h3>Saas or On-Site</h3>
+                  <p>
+                    Choose to host it yourself or take advantage
+                    of our fully managed services in the cloud
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-grid-alt"></i>
+                </div>
+                <div class="content">
+                  <h3>Kubernetes Ready</h3>
+                  <p>
+                    We have a an innovative way to deploy Billstreams
+                    in the cloud using Kuberlogic Saas architecture
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-code"></i>
+                </div>
+                <div class="content">
+                  <h3>Pricing Templates</h3>
+                  <p>
+                    Want to bill like established online services? We have
+                    templates to help you achieve enterprise grade pricing models
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-stripe"></i>
+                </div>
+                <div class="content">
+                  <h3>Stripe Integration</h3>
+                  <p>
+                    We integrate with Stripe. Being a pure billing solution,
+                    we can integrate with any payment processing engine
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="single-feature-extended">
+                <div class="icon">
+                  <i class="lni lni-pencil-alt"></i>
+                </div>
+                <div class="content">
+                  <h3>Documentation</h3>
+                  <p>
+                    Good software starts with good docs. We've clearly detailed
+                    every aspect of the software including the tech stack itself
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== feature-section end ======== -->
+
+    <!-- ======== subscribe-section start ======== -->
+    <!--<section id="contact" class="subscribe-section pt-120">
+      <div class="container">
+        <div class="subscribe-wrapper img-bg">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-7">
+              <div class="section-title mb-15">
+                <h2 class="text-white mb-25">Subscribe Our Newsletter</h2>
+                <p class="text-white pr-5">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-5">
+              <form action="#" class="subscribe-form">
+                <input
+                  type="email"
+                  name="subs-email"
+                  id="subs-email"
+                  placeholder="Your Email"
+                />
+                <button type="submit" class="main-btn btn-hover">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+    <!-- ======== subscribe-section end ======== -->
+
+    <!-- ======== footer start ======== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="widget-wrapper">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="footer-widget">
+                <div class="logo mb-30">
+                  <a href="index.html">
+                    <img src="assets/img/logo/logo.png" alt="" />
+                  </a>
+                </div>
+                <p class="desc mb-30 text-white">
+                  An alternative to closed billing. For usage-based pricing, subscriptions, and everything in between.
+                </p>
+                <ul class="socials">
+                  <li>
+                    <a href="jvascript:void(0)">
+                      <i class="lni lni-slack"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="jvascript:void(0)">
+                      <i class="lni lni-twitter-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="jvascript:void(0)">
+                      <i class="lni lni-github-original"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-6">
+              <div class="footer-widget">
+                <h3>Developers</h3>
+                <ul class="links">
+                  <li><a href="javascript:void(0)">Github</a></li>
+                  <li><a href="javascript:void(0)">Documentation</a></li>
+                  <li><a href="javascript:void(0)">API Reference</a></li>
+                  <li><a href="javascript:void(0)">Community</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h3>Resources</h3>
+                <ul class="links">
+                  <li><a href="javascript:void(0)">Templates</a></li>
+                  <li><a href="javascript:void(0)">Compare Billing Tools</a></li>
+                  <li><a href="javascript:void(0)">Modern Pricing Stack</a></li>
+                  <li><a href="javascript:void(0)">The Tech Stack</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h3>Company</h3>
+                <ul class="links">
+                  <li><a href="jvascript:void(0)">Blog</a></li>
+                  <li><a href="jvascript:void(0)">About</a></li>
+                  <li><a href="jvascript:void(0)">Terms of Service</a></li>
+                  <li><a href="jvascript:void(0)">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ======== footer end ======== -->
+
+    <!-- ======== scroll-top ======== -->
+    <a href="#" class="scroll-top btn-hover">
+      <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ======== JS here ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
